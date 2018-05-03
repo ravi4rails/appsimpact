@@ -1,0 +1,64 @@
+<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p>
+</div>
+
+<div class="container">
+  <div class="row">  
+    <div class="mt-5">
+      <h3 class="text-md-center">OUR LATEST COURSES</h3>
+      <hr style="border:2px; height:5px;background-color: #f00;">
+    </div>
+  </div>
+  <div class="row mt-4 course-item-row">
+    <div class="col-md col-sm">
+      <div class="card">
+        <%= image_tag "rails.jpg", class: "card-img-top" %>
+        <div class="card-body">
+          <p class="card-title text-justify">Full Stack Web Development in Ruby on Rails</p>
+          <%= link_to '/course/full-stack-web-development-in-ruby-on-rails', class: "btn btn-primary" do %>
+            <i class="fa fa-eye"></i> View Details
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md col-sm">
+      <div class="card">
+        <%= image_tag "ng5_new.jpg", class: "card-img-top" %>
+        <div class="card-body">
+          <p class="card-title text-justify">Complete Front End Development Using Angular5</p>
+          <%= link_to '/course/complete-front-end-development-using-angular-five', class: "btn btn-primary" do %>
+            <i class="fa fa-eye"></i> View Details
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md col-sm">
+      <div class="card">
+        <%= image_tag "mysql.png", class: "card-img-top" %>
+        <div class="card-body">
+          <p class="card-title text-justify">Complete Foundation from Start to End MySQL</p>
+          <%= link_to '/course/complete-foundation-from-start-to-end-mysql', class: "btn btn-primary" do %>
+            <i class="fa fa-eye"></i> View Details
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md col-sm">
+      <div class="card">
+        <%= image_tag "django.jpg", class: "card-img-top" %>
+        <div class="card-body">
+          <p class="card-title text-justify">Full Stack Web Development with Python Django</p>
+          <%= link_to '/course/full-stack-web-development-with-python-django', class: "btn btn-primary" do %>
+            <i class="fa fa-eye"></i> View Details
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
