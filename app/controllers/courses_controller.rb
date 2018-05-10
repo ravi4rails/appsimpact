@@ -16,4 +16,8 @@ class CoursesController < ApplicationController
     @course_enquiry = CourseEnquiry.new
   end
 
+  def php_course
+    @course_enquiry = CourseEnquiry.new
+  end
+
 end
