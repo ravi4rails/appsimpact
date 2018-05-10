@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row mt-5">
-    <div class="col-md-9 course-area">
+    <div class="col-md-8 course-area">
       <div class="course-heading mb-3">
         <h2>Complete Front End Development Using Angular5</h2>
       </div>
@@ -552,7 +552,50 @@
         </div>
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Make an enqiry</h3>
+        </div>
+        <div class="card-body">
+          <%= form_for @course_enquiry do |f| %>
+            
+            <% if @course_enquiry.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@course_enquiry.errors.count, "error") %> prohibited this course_enquiry from being saved:</h2>
+             
+                <ul>
+                <% @course_enquiry.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
+            <%= f.hidden_field :course_name, value: 'Complete Front End Development Using Angular5' %>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+              </div>
+              <%= f.text_field :name, class: "form-control", "placeholder" => "Your Name", "aria-label" => "Your Name", "aria-describedby" =>"basic-addon1", required:true %>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+              </div>
+              <%= f.email_field :email,class: "form-control", "placeholder" => "Your Email", "aria-label" => "Your Email", "aria-describedby" =>"basic-addon1", required:true   %>
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone"></i></span>
+              </div>
+              <%= f.text_field :contact,class: "form-control", "placeholder" => "Your Contact", "aria-label" => "Your Contact", "aria-describedby" =>"basic-addon1",required:true  %>
+            </div>
+            <div class="form-group">
+              <%= f.submit "Submit Details", class: "btn btn-primary btn-block" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

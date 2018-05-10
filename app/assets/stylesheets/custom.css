@@ -107,3 +107,9 @@ section {
   background-size: cover;
 }
 .carousel-item {height:450px !important;opacity:0.5;}
+.flash-message{
+  padding-top: 7px;
+  padding-bottom: 16px;
+  text-align: center;
+  background-color: rgb(248, 249, 250);
+}
