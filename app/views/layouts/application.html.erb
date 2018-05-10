@@ -11,6 +11,15 @@
 
   <body>
     <%= render "partials/header" %>
+    <% if flash[:notice].present? %>
+      <div class="flash-message mt-5 ml-5 mr-5 text-dark">
+        <%= flash[:notice] %>
+      </div> 
+    <% end %>  
+    </body> 
+    
+      <%= flash[:error] %>
+   
     <%= yield %>
     <%= render "partials/footer" %>
   </body>
