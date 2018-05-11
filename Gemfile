@@ -62,3 +62,4 @@ end
 gem 'bootstrap', '~> 4.1.0'
 gem 'jquery-rails'
 gem "font-awesome-rails"
+gem 'devise'

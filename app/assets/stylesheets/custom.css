@@ -115,11 +115,16 @@ section {
 }
 .contact-form{margin-left: -7%;}
 .contact-btn{
-  background-color: #dc3545;
-  border-color: #dc3545;
+  background-color: #fc4f4f;
+  border-color: #fc4f4f;
   color: #fff;
+  border-radius: 0px;
 }
-.contact-form .form-control, .contact-form .btn {border-radius:0px;}
+.contact-form .form-control{
+  border-radius:0px;  
+  background-color: #f5f5f5;
+  border-color: #f5f5f5;
+}
 #map {
   width: 102%;
   height: 117%;
@@ -127,3 +132,18 @@ section {
   background-color: grey;
 }
 .contact-container{width: 69%;margin-left: 20%;}
+.sign-up-btn{
+  background-color: #fc4f4f;
+  border-color: #fc4f4f;
+  color: #fff;
+  border-radius: 0px;
+}
+.sign-up-form .form-control{
+  border-radius: 0px;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  border-color: #f5f5f5;
+}
+.forgot-link{color: gray;text-decoration: none;}
+.forgot-link:hover{color:#000;text-decoration: none;}
+.remeber-link{color: gray;}
