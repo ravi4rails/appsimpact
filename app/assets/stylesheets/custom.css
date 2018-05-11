@@ -113,3 +113,17 @@ section {
   text-align: center;
   background-color: rgb(248, 249, 250);
 }
+.contact-form{margin-left: -7%;}
+.contact-btn{
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+.contact-form .form-control, .contact-form .btn {border-radius:0px;}
+#map {
+  width: 102%;
+  height: 117%;
+  margin-top: -10.3%;
+  background-color: grey;
+}
+.contact-container{width: 69%;margin-left: 20%;}
