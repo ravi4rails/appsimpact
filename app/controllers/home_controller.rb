@@ -3,7 +3,10 @@ class HomeController < ApplicationController
   # before_action :authenticate_user!
   def index
   end
-  
+
+  def about_us
+  end
+
   def create_contact
     @contact = Contact.new(contact_params)
     if @contact.save

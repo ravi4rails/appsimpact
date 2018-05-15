@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   }
 
   root 'home#index'
+  resources :workshops do
 
+  end 
   resources :course_enquiries 
 
   get '/course/full-stack-web-development-in-ruby-on-rails' => "courses#rails_course"
@@ -12,6 +14,9 @@ Rails.application.routes.draw do
   get '/course/complete-foundation-from-start-to-end-mysql' => "courses#mysql_course"
   get '/course/complete-front-end-development-using-angular-five' => "courses#angular_course"
   get '/course/web-development-in-php' => "courses#php_course"
+  get '/about_us' =>"home#about_us"
+  get '/recent_workshop' =>"workshops#recent_workshop"
+  get '/upcoming_workshop' =>"workshops#upcoming_workshop"
   post'/create_contact' =>"home#create_contact"
   post'/subscribe' =>"home#subscribe"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

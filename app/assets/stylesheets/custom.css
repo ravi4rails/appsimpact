@@ -68,6 +68,14 @@
   padding-bottom: 5%; 
   padding-top: 5%;
 }
+.grid-section1{
+/*  background-color: #f5f5f5;*/
+  margin-top:10%;
+  margin-bottom:5%;
+  padding-bottom: 5%; 
+  padding-top: 2%;
+  text-align: center!important;
+}
 .item {
   height:350px;
   width:99%;
@@ -159,3 +167,10 @@ section {
   color: #fff;
   border-radius: 0px;
 }
+.workshop-btn{
+  background-color: #fc4f4f;
+  border-color: #fc4f4f;
+  color: #fff;
+  border-radius: 0px;
+}
+.workshop-btn:hover{color:#002634;}
