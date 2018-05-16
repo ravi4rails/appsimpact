@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 offset-3 text-center mt-4">
-      <h3>Workshop Rgistration</h3>
+      <h3>Workshop Registration</h3>
       <div class="workshop-form">
         <%= form_for :register ,html: {name: "myForm", onsubmit: "return validateForm()"},  url: :create_register, method: :post do |f| %>
           <%= f.hidden_field :workshop_title, value: "Ruby On Rails"%>
