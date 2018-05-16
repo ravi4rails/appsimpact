@@ -231,8 +231,6 @@
     </div>
   </div>
 </section>
-
-
 <section>
   <div class="row mr-0 ml-0">
     <div class="col-md">
@@ -241,23 +239,27 @@
           <h5 class="text-center mr-3">SEND A MESSAGE</h5>
         </div>
         <div class="form contact-form">
-          <form action="/create_contact"  method="post" class="">
+          <form action="/create_contact"  method="post"  name="myForm" onsubmit="return validateForm()">
             <div class="container contact-container">
               <div class="text-center">
                 <div class="form-group  mt-5">
-                  <input type="text" class="form-control form-control-lg" name="contact[name]" id="yourName" placeholder="Name" required>
+                  <input type="text" class="form-control form-control-lg" name="contact[name]" id="name" placeholder="Name" onblur="requiredname(this)"  >
+                  <p id="errorname" class="text_color"></p>
                 </div>
                 <div class="form-group  mt-3">
-                  <input type="text" class="form-control form-control-lg" name="contact[email_address]" id="yourEmail" placeholder="Email" required>
+                  <input type="text" class="form-control form-control-lg" name="contact[email_address]" id="email" placeholder="Email" onblur="requiredemail(this)" >
+                  <p id="erroremail" class="text_color"></p>
                 </div>
                 <div class="form-group  mt-3">
-                  <input type="text" class="form-control form-control-lg" name="contact[subject]" id="yourSubject" placeholder="Subject" required>
+                  <input type="text" class="form-control form-control-lg" name="contact[subject]" id="subject" placeholder="Subject" onblur="requiredsubject(this)" >
+                  <p id="errorsubject" class="text_color"></p>
                 </div>
                 <div class="form-group  mt-3">
-                  <textarea  class="form-control form-control-lg" name="contact[message]" id="Message" placeholder="Message" rows="5" required></textarea>
+                  <textarea  class="form-control form-control-lg" name="contact[message]" id="message" placeholder="Message" rows="5" onblur="requiredmessage(this)" ></textarea>
+                  <p id="errormessage" class="text_color"></p>
                 </div>
                 <div class="form-group mt-3">
-                  <button class="contact-btn btn btn-block btn-lg">Submit</button>
+                  <button type="submit" class="contact-btn btn btn-block btn-lg shadow">Submit</button>
                 </div>  
               </div> 
             </div>   
@@ -312,6 +314,83 @@
       position: uluru,
       map: map
     });
+  }
+  function requiredname(input) 
+  {
+    if (input.value.length < 1) 
+    {
+         //red border
+      input.style.borderColor = "#e74c3c";
+      document.getElementById('errorname').innerHTML="Name Can't be Blank";
+    }
+    else 
+    {
+         //green border
+      input.style.borderColor = "#2ecc71";
+      document.getElementById("errorname").innerHTML=("");
+    }
+  }
+  function requiredemail(input) 
+  {
+    if (input.value.length < 1) 
+    {
+     //red border
+     input.style.borderColor = "#e74c3c";
+     document.getElementById('erroremail').innerHTML="Email Can't br Blank";
+         
+    }
+    else 
+    {
+      //green border
+      input.style.borderColor = "#2ecc71";
+      document.getElementById('erroremail').innerHTML="";
+    }
+  }
+  function requiredsubject(input) 
+  {
+    if (input.value.length < 1) 
+    {
+     //red border
+     input.style.borderColor = "#e74c3c";
+     document.getElementById('errorsubject').innerHTML="Subject Can't br Blank";
+         
+    }
+    else 
+    {
+      //green border
+      input.style.borderColor = "#2ecc71";
+      document.getElementById('errorsubject').innerHTML="";
+    }
+  }
+  function requiredmessage(textarea) 
+  {
+    if (textarea.value.length < 1) 
+    {
+     //red border
+     textarea.style.borderColor = "#e74c3c";
+     document.getElementById('errormessage').innerHTML="Message Can't br Blank";
+         
+    }
+    else 
+    {
+      //green border
+     textarea.style.borderColor = "#2ecc71";
+      document.getElementById('errormessage').innerHTML="";
+    }
+  }
+
+  // Valdiation of form
+  function validateForm() 
+  {
+    var x = document.forms["myForm"]["name"].value;
+    if (x == "") 
+    {
+      document.getElementById('errorname').innerHTML="Name Can't be blank";
+      document.getElementById('erroremail').innerHTML="Email Can't be Blank";
+      document.getElementById('errorsubject').innerHTML="Subject Can't be Blank";
+      document.getElementById('errormessage').innerHTML="Message Can't be Blank";
+      return false;
+    }
   }
 </script>
   <script async defer

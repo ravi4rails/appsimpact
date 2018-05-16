@@ -174,3 +174,52 @@ section {
   border-radius: 0px;
 }
 .workshop-btn:hover{color:#002634;}
+
+/*Validation Css */
+
+input.isRequired {
+  border: 2px solid #e74c3c;
+}
+.errorMessages {
+  width: calc(100% - 8px);
+  padding: 20px 0;
+  background: #e74c3c;
+  color: white;
+  border: 2px solid #EC644B;
+  display: none;
+}
+.errorMessages li {
+  padding: 0 0 5px 0;
+  margin: 0 0 0 30px;
+  font-family: Open Sans, sans serif;
+}
+
+#info {
+  width: 360px;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+
+#info h1 {
+  margin: 10px 0;
+}
+
+#info li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+#info li::before {
+  content: '\f1d9';
+  position: absolute;
+  left: 8px;
+  font:normal normal normal 14px/1 FontAwesome;
+  font-size:inherit;
+  text-rendering:auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.text_color{
+  color: #fc4f4f;
+  float:left;
+}

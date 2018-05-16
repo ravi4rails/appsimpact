@@ -24,7 +24,7 @@ class HomeController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:name,:email,:message, :subject)
+    params.require(:contact).permit(:name,:email_address,:message, :subject)
   end
 
   def subscribe_params

@@ -2,12 +2,9 @@ class CourseEnquiriesController < ApplicationController
   
   def create
     @course_enquiry = CourseEnquiry.new(course_enquiry_params)
-    respond_to do |format|
       if @course_enquiry.save
-        format.html { redirect_to request.referrer, notice: 'Thankyou Your Details Submited Successfully...' }
-      else
-        format.html { redirect_to request.referrer }
-      end
+      flash[:notice] = 'Thankyou Your Details Submited Successfully...'
+      redirect_to  request.referrer
     end  
   end
 

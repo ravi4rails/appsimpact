@@ -15,4 +15,5 @@
 //= require popper
 //= require bootstrap
 //= require owl.carousel
+//= require validate
 //= require turbolinks
