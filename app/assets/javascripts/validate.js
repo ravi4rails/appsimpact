@@ -14,13 +14,29 @@
       document.getElementById("errorname").innerHTML=("");
     }
   }
+  function requiredpassword(input) 
+  {
+    if (input.value.length < 1) 
+    {
+     //red border
+     input.style.borderColor = "#e74c3c";
+     document.getElementById('errorpassword').innerHTML="Password Can't be Blank";
+         
+    }
+    else 
+    {
+      //green border
+      input.style.borderColor = "#2ecc71";
+      document.getElementById('errorpassword').innerHTML="";
+    }
+  }
   function requiredemail(input) 
   {
     if (input.value.length < 1) 
     {
      //red border
      input.style.borderColor = "#e74c3c";
-     document.getElementById('erroremail').innerHTML="Email Can't br Blank";
+     document.getElementById('erroremail').innerHTML="Email Can't be Blank";
          
     }
     else 
@@ -36,7 +52,7 @@
     {
      //red border
      input.style.borderColor = "#e74c3c";
-     document.getElementById('errorcontact').innerHTML="Contact Can't br Blank";    
+     document.getElementById('errorcontact').innerHTML="Contact Can't be Blank";    
     }
     else 
     {
@@ -51,7 +67,7 @@
     {
      //red border
      input.style.borderColor = "#e74c3c";
-     document.getElementById('errorcollage').innerHTML="collage Name Can't br Blank";    
+     document.getElementById('errorcollage').innerHTML="collage Name Can't be Blank";    
     }
     else 
     {
@@ -66,7 +82,7 @@
     {
      //red border
      input.style.borderColor = "#e74c3c";
-     document.getElementById('errorbranch').innerHTML="Branch Can't br Blank";    
+     document.getElementById('errorbranch').innerHTML="Branch Can't be Blank";    
     }
     else 
     {
@@ -81,7 +97,7 @@
     {
      //red border
      input.style.borderColor = "#e74c3c";
-     document.getElementById('erroryear').innerHTML="Year Can't br Blank";    
+     document.getElementById('erroryear').innerHTML="Year Can't be Blank";    
     }
     else 
     {
@@ -99,8 +115,9 @@
     if (x == "") 
     {
       document.getElementById('errorname').innerHTML="Name Can't be blank";
+      document.getElementById('errorpassword').innerHTML="Password Can't be blank";
       document.getElementById('erroremail').innerHTML="Email Can't be Blank";
-      document.getElementById('errorcontact').innerHTML="Email Can't be Blank";
+      document.getElementById('errorcontact').innerHTML="Contact Can't be Blank";
       document.getElementById('errorcollage').innerHTML="Collage Name Can't be Blank";
       document.getElementById('errorbranch').innerHTML="Branch Can't be Blank";
       document.getElementById('erroryear').innerHTML="Year Can't be Blank";

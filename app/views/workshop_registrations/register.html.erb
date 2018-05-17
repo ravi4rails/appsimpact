@@ -3,33 +3,35 @@
     <div class="col-md-6 offset-3 text-center mt-4">
       <h3>Workshop Registration</h3>
       <div class="workshop-form">
-        <%= form_for :register, url: :create_register, method: :post do |f| %>
+        <%= form_for :register, url: :create_register,html: { name: "myForm", onsubmit: "return validateForm()"},  method: :post do |f| %>
           <%= f.hidden_field :workshop_title, value: "Ruby On Rails"%>
           <div class="form-group mt-3">
-            <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
+            <%= f.text_field :name, class: "form-control form-control-lg", placeholder: "Name", onblur:"requiredname(this)", id:"name"  %>
+            <p id="errorname" class="text_color">   </p>
           </div>
 
           <div class="form-group mt-3">
-            <%= f.text_field :email, class: "form-control", placeholder: "Email"  %>
-           
+            <%= f.text_field :email, class: "form-control form-control-lg", placeholder: "Email"  , onblur:"requiredemail(this)", id:"email"%>
+            <p id="erroremail" class="text_color">   </p>
           </div>
           <div class="form-group mt-3">
-            <%= f.text_field :contact, class: "form-control", placeholder: "Contact"  %>
-           
+            <%= f.text_field :contact, class: "form-control", placeholder: "Contact", onblur:"requiredcontact(this)", id:"contact"  %>
+            <p id="errorcontact" class="text_color">   </p> 
           </div>
           <div class="form-group mt-3">
-            <%= f.text_field :collage_name, class: "form-control", placeholder: "Collage Name" %>
-           
+            <%= f.text_field :collage_name, class: "form-control form-control-lg", placeholder: "Collage Name", onblur:"requiredcollage(this)", id:"collage"   %>
+            <p id="errorcollage" class="text_color">   </p> 
+         </div>
+          <div class="form-group mt-3">
+            <%= f.text_field :branch, class: "form-control form-control-lg", placeholder: "Branch", onblur:"requiredbranch(this)", id:"branch"   %>
+            <p id="errorbranch" class="text_color">   </p> 
           </div>
           <div class="form-group mt-3">
-            <%= f.text_field :branch, class: "form-control", placeholder: "Branch"  %>
-            
+            <%= f.text_field :year, class: "form-control form-control-lg", placeholder: "Year", onblur:"requiredyear(this)", id:"year"  %>
+            <p id="erroryear" class="text_color">   </p> 
           </div>
           <div class="form-group mt-3">
-            <%= f.text_field :year, class: "form-control", placeholder: "Year"  %>
-          </div>
-          <div class="form-group mt-3">
-            <%= f.submit "Submit", class: "btn btn-lg contact-btn btn-block" %>
+            <%= f.submit "Submit", class: "btn btn-lg contact-btn btn-block", "data-disable-with" => false%>
           </div>
         <% end %>
       </div>
