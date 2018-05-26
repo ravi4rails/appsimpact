@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: {
     sessions: 'users/sessions'
@@ -6,9 +7,9 @@ Rails.application.routes.draw do
 
   root 'home#index'
   resources :workshop
-  
-  
+  resources :reviews
   resources :course_enquiries 
+  resources :courses
 
   get '/course/full-stack-web-development-in-ruby-on-rails' => "courses#rails_course"
   get '/course/full-stack-web-development-with-python-django' => "courses#python_course"

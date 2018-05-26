@@ -23,6 +23,16 @@
   background-color: #3b5998!important;
   color: #fff!important;
 }
+.ratings{min-height: 50px;}
+.review-title{
+  background-color: #f7f7f7;
+  border: 1px solid #dfdfdf;
+  border-radius: 2px;
+  padding: 15px;
+  margin-bottom:-1px;
+}
+.review-body{padding: 20px;}
+img.raty-cancel {display: none;}
 .btn-floating {
   -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
   box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
@@ -232,4 +242,33 @@ section {
   float:left;
   padding: 2px;
 }
-
+h2 {
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  position: relative;
+  margin: 30px 0 60px;
+}
+h2::after {
+  content: "";
+  width: 100px;
+  position: absolute;
+  margin: 0 auto;
+  height: 3px;
+  background: #8fbc54;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+}
+.col-center {
+  margin: 0 auto;
+  float: none !important;
+}
+.review-carousel.active, .review-carousel-next, .review-carousel-prev{
+  border:none;
+  display: unset;
+  text-align: center;
+}
+.review-carousel-indicator{margin-bottom:-5%;}

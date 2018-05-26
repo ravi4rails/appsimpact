@@ -60,9 +60,15 @@
           <%= image_tag "rails.jpg", class: "card-img-top" %>
           <div class="card-body">
             <p class="card-title text-justify">Full Stack Web Development in Ruby on Rails</p>
-            <%= link_to '/course/full-stack-web-development-in-ruby-on-rails', class: "btn btn-primary" do %>
-              <i class="fa fa-eye"></i> View Details
-            <% end %>
+            <% if !current_user.present?%>
+              <%= link_to new_user_session_path, class: "btn btn-primary" do %>
+               <i class="fa fa-eye"></i> View Details
+              <% end %> 
+            <%else%>
+              <%= link_to '/course/full-stack-web-development-in-ruby-on-rails', class: "btn btn-primary" do %>
+                <i class="fa fa-eye"></i> View Details
+              <% end %>
+            <%end%>  
           </div>
         </div>
       </div>
@@ -71,9 +77,15 @@
           <%= image_tag "ng5_new.jpg", class: "card-img-top" %>
           <div class="card-body">
             <p class="card-title text-justify">Complete Front End Development Using Angular5</p>
-            <%= link_to '/course/complete-front-end-development-using-angular-five', class: "btn btn-primary" do %>
-              <i class="fa fa-eye"></i> View Details
-            <% end %>
+            <% if !current_user.present?%>
+              <%= link_to new_user_session_path, class: "btn btn-primary" do %>
+               <i class="fa fa-eye"></i> View Details
+              <% end %> 
+            <%else%>
+              <%= link_to '/course/complete-front-end-development-using-angular-five', class: "btn btn-primary" do %>
+               <i class="fa fa-eye"></i> View Details
+              <% end %> 
+            <%end%> 
           </div>
         </div>
       </div>
@@ -82,9 +94,15 @@
           <%= image_tag "mysql.png", class: "card-img-top" %>
           <div class="card-body">
             <p class="card-title text-justify">Complete Foundation from Start to End MySQL</p>
-            <%= link_to '/course/complete-foundation-from-start-to-end-mysql', class: "btn btn-primary" do %>
-              <i class="fa fa-eye"></i> View Details
-            <% end %>
+            <% if !current_user.present?%>
+              <%= link_to new_user_session_path, class: "btn btn-primary" do %>
+               <i class="fa fa-eye"></i> View Details
+              <% end %> 
+            <%else%>
+               <%= link_to '/course/complete-foundation-from-start-to-end-mysql', class: "btn btn-primary" do %>
+                 <i class="fa fa-eye"></i> View Details
+              <% end %>
+            <% end %>  
           </div>
         </div>
       </div>
@@ -93,9 +111,15 @@
           <%= image_tag "django.jpg", class: "card-img-top" %>
           <div class="card-body">
             <p class="card-title text-justify">Full Stack Web Development with Python Django</p>
-            <%= link_to '/course/full-stack-web-development-with-python-django', class: "btn btn-primary" do %>
-              <i class="fa fa-eye"></i> View Details
-            <% end %>
+            <% if !current_user.present?%>
+              <%= link_to new_user_session_path, class: "btn btn-primary" do %>
+               <i class="fa fa-eye"></i> View Details
+              <% end %> 
+            <% else %>
+              <%= link_to '/course/full-stack-web-development-with-python-django', class: "btn btn-primary" do %>
+                <i class="fa fa-eye"></i> View Details
+              <% end %>
+            <% end %>  
           </div>
         </div>
       </div>
@@ -106,9 +130,15 @@
           <%= image_tag "phpwp.png", class: "card-img-top" %>
           <div class="card-body">
             <p class="card-title text-justify">Web Development in PHP</p>
-            <%= link_to '/course/web-development-in-php', class: "btn btn-primary" do %>
-              <i class="fa fa-eye"></i> View Details
-            <% end %>
+            <% if !current_user.present?%>
+              <%= link_to new_user_session_path, class: "btn btn-primary" do %>
+               <i class="fa fa-eye"></i> View Details
+              <% end %> 
+            <% else %>
+              <%= link_to '/course/web-development-in-php',class: "btn btn-primary" do %>
+               <i class="fa fa-eye"></i> View Details
+              <% end %>
+            <% end %>  
           </div>
         </div>
       </div>
@@ -117,9 +147,15 @@
           <%= image_tag "node.jpg", class: "card-img-top" %>
           <div class="card-body">
             <p class="card-title text-justify">NODE JS Development</p>
-            <%= link_to '/course/web-development-in-php', class: "btn btn-primary" do %>
-              <i class="fa fa-eye"></i> View Details
-            <% end %>
+            <% if !current_user.present?%>
+              <%= link_to new_user_session_path, class: "btn btn-primary" do %>
+               <i class="fa fa-eye"></i> View Details
+              <% end %> 
+            <% else %>
+              <%= link_to '/course/web-development-in-php', class: "btn btn-primary" do %>
+                <i class="fa fa-eye"></i> View Details
+              <% end %>
+            <% end %>  
           </div>
         </div>
       </div>

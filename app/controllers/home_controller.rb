@@ -6,7 +6,7 @@ class HomeController < ApplicationController
 
   def about_us
   end
-
+  
   def create_contact
     @contact = Contact.new(contact_params)
     if @contact.save

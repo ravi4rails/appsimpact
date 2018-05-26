@@ -12,8 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.raty
+//= require ratyrate
 //= require popper
 //= require bootstrap
 //= require owl.carousel
 //= require validate
-//= require turbolinks
+
