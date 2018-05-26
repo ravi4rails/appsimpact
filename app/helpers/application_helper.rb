@@ -1,4 +1,5 @@
 module ApplicationHelper
+  
   def rating_for_user(rateable_obj, rating_user, dimension = nil, options = {})
     @object = rateable_obj
     @user   = rating_user

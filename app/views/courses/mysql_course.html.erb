@@ -249,7 +249,7 @@
                 <%= f.text_field :name, class: "form-control", "placeholder" => "Your Name", "aria-label" => "Your Name", "aria-describedby" =>"basic-addon1" ,required:true  %>
               </div>
               <%= f.hidden_field :user_id, value: current_user.id%>
-                <%= f.hidden_field :course_name, value:@course.course_name%>
+                <%= f.hidden_field :course_name, value: "Complete Foundation from Start to End MySQL"%>
               <div class="input-group mb-3">
                 <%= f.text_area :message, class: "form-control", "placeholder" => "Message", "aria-label" => "Message", "aria-describedby" =>"basic-addon1",required:true , rows: "5" %>
               </div>

@@ -31,6 +31,13 @@
   padding: 15px;
   margin-bottom:-1px;
 }
+.review-heading-home{
+  border-bottom: 1px solid #f00;
+  width: 21%;
+  padding: 5px;
+  border-width: 5px;
+}
+.star-home{float:right;margin-top: -14%;}
 .review-body{padding: 20px;}
 img.raty-cancel {display: none;}
 .btn-floating {
@@ -271,4 +278,4 @@ h2::after {
   display: unset;
   text-align: center;
 }
-.review-carousel-indicator{margin-bottom:-5%;}
+.review-carousel-indicator{margin-bottom:5%;}

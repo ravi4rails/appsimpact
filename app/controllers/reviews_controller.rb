@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   def create
     @user = current_user.id
-    # @course = Course.find_by(params[:course_name])
+    #@course = Course.find_by(params[:course_name])
     @review = Review.new(review_params)
       if @review.save
       flash[:notice] = 'Thankyou For Review...'
