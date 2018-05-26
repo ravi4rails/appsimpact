@@ -182,37 +182,39 @@
     </div>
   </div>
 </section>
-
-<section class="grid-section">
-  <div class="container">
-    <div class="heading-text">
-      <h3 class="text-dark review-heading-home">Students Reviews</h3>
-    </div>
-      <div class="row mt-5">
-      <% @review.first(3).each do |review| %>
-        <div class="col-md-4 review-home-section">
-          <div class="shadow ">
-            <div class="view overlay">
-              <%= image_tag "node.jpg", class: "img-responsive", style: "width:348px; height:285px;"%>
-              <a>
-                <div class="mask rgba-white-slight"></div>
-              </a>
+<% if @review.present? %>
+  <section class="grid-section">
+    <div class="container">
+      <div class="heading-text">
+        <h3 class="text-dark review-heading-home">Students Reviews</h3>
+      </div>
+        <div class="row mt-5">
+        <% @review.first(3).each do |review| %>
+          <div class="col-md-4 review-home-section">
+            <div class="shadow ">
+              <div class="view overlay">
+                <%= image_tag "node.jpg", class: "img-responsive", style: "width:348px; height:285px;"%>
+                <a>
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+              <div class="featured-review">
+                <a class="activator waves-effect waves-light pull-right p-2 mt-2 mr-2"><i class="fa fa-share-alt"></i></a>
+                <h4 class="font-weight-bold p-2 mr-2 mt-2"><%= review.name %></h4>
+                <hr>
+                <p class="ml-2 "><%= truncate(review.message, :length => 80)%></p>
+                <div >
+                 <%= rating_for @course, 'rating', class: "star-home"%>
+                </div> 
+              </div>
             </div>
-            <div class="featured-review">
-              <a class="activator waves-effect waves-light pull-right p-2 mt-2 mr-2"><i class="fa fa-share-alt"></i></a>
-              <h4 class="font-weight-bold p-2 mr-2 mt-2"><%= review.name %></h4>
-              <hr>
-              <p class="ml-2 "><%= truncate(review.message, :length => 80)%></p>
-              <div >
-               <%= rating_for @course, 'rating', class: "star-home"%>
-              </div> 
-            </div>
-          </div>
-        </div>  
-      <%end%>  
+          </div>  
+        <%end%>  
+      </div>  
     </div>  
-  </div>  
-</section>
+  </section>
+<%else%> 
+<%end%> 
 
 <section class="grid-section">
   <div class="container">
