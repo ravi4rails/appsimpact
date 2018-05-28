@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180526051757) do
+ActiveRecord::Schema.define(version: 20180528132720) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer "rater_id"
@@ -77,7 +77,6 @@ ActiveRecord::Schema.define(version: 20180526051757) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string "name"
     t.text "message"
     t.string "rating_star"
     t.integer "user_id"
