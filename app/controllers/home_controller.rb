@@ -3,7 +3,8 @@ class HomeController < ApplicationController
   # before_action :authenticate_user!
   def index
     @review = Review.all
-    @course = Course.find_by(params[:course_name])
+    @course =Course.find_by(params[:course_name])
+   
   end
 
   def about_us

@@ -19,22 +19,42 @@
         <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">COURSES</h5>
         <ul class="list-unstyled">
           <li>
-            <%= link_to "Ruby On Rails",course_full_stack_web_development_in_ruby_on_rails_path %>
+            <% if !current_user.present? %>
+              <%=link_to "Ruby On Rails",new_user_session_path %>
+            <%else%>
+              <%= link_to "Ruby On Rails",course_full_stack_web_development_in_ruby_on_rails_path %>
+           <%end%>   
           </li>
           <li>
-            <%= link_to "Python & Django", course_full_stack_web_development_with_python_django_path %>
+            <% if !current_user.present? %>
+              <%=link_to "Python & Django",new_user_session_path %>
+            <%else%>
+              <%= link_to "Python & Django", course_full_stack_web_development_with_python_django_path %>
+            <%end%>  
           </li>
           <li>
-            <%= link_to "Angular", course_complete_front_end_development_using_angular_five_path %>
+            <% if !current_user.present? %>
+              <%=link_to "Angular",new_user_session_path %>
+            <%else%>
+              <%= link_to "Angular", course_complete_front_end_development_using_angular_five_path %>
+            <%end%>  
           </li>
           <li>
             <a href="#">Node Js</a>
           </li>
           <li>
-            <%= link_to "PHP With Wordpress", course_web_development_in_php_path %>
+            <% if !current_user.present? %>
+              <%=link_to "PHP With Wordpress",new_user_session_path %>
+            <%else%>
+              <%= link_to "PHP With Wordpress", course_web_development_in_php_path %>
+            <%end%>  
           </li>
           <li>
-            <%= link_to "Mysql", course_complete_foundation_from_start_to_end_mysql_path %>
+            <% if !current_user.present? %>
+              <%=link_to "Mysql",new_user_session_path %>
+            <%else%>
+              <%= link_to "Mysql", course_complete_foundation_from_start_to_end_mysql_path %>
+            <%end%>  
           </li>
         </ul>
       </div>

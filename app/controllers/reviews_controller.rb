@@ -1,7 +1,8 @@
 class ReviewsController < ApplicationController
   def create
     @user = current_user.id
-    #@course = Course.find_by(params[:course_name])
+    @course = Course.all
+  
     @review = Review.new(review_params)
       if @review.save
       flash[:notice] = 'Thankyou For Review...'
@@ -11,7 +12,7 @@ class ReviewsController < ApplicationController
 
   private
     def review_params
-      params.require(:review).permit(:name, :message, :user_id, :course_name)
+      params.require(:review).permit(:name, :message, :user_id, :course_name, :course_id)
     end
 
 end

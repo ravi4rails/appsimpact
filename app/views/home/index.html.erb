@@ -204,6 +204,7 @@
                 <hr>
                 <p class="ml-2 "><%= truncate(review.message, :length => 80)%></p>
                 <div >
+
                  <%= rating_for @course, 'rating', class: "star-home"%>
                 </div> 
               </div>
@@ -215,6 +216,9 @@
   </section>
 <%else%> 
 <%end%> 
+
+
+
 
 <section class="grid-section">
   <div class="container">

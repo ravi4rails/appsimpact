@@ -2,7 +2,6 @@ class CoursesController < ApplicationController
   def index
    @courses = Course.all
   end
-
   def rails_course
     @course_enquiry = CourseEnquiry.new
     @review =Review.new
