@@ -273,9 +273,7 @@
           <div class=" rating-star mb-3">
             <%= course_rating @course, 'rating', disable_after_rate: false%>
           </div>  
-            <div class="input-group mb-3">
-              <%= f.text_field :name, class: "form-control", "placeholder" => "Your Name", "aria-label" => "Your Name", "aria-describedby" =>"basic-addon1" ,required:true  %>
-            </div>
+
             <%= f.hidden_field :user_id, value: current_user.id%>
             <%= f.hidden_field :course_id, value: @course.id%>
               <%= f.hidden_field :course_name, value: "Full Stack Web Development in Ruby on Rails"%>
