@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users, controllers: {
-    sessions: 'users/sessions'
-  }
+  devise_for :users, :controllers => { :registrations => "users/registrations" }
 
   root 'home#index'
   resources :workshop
